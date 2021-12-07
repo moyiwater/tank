@@ -16,9 +16,7 @@ public class TankFrame extends Frame{
         setResizable(false);
         setTitle("tank war");
         setVisible(true);
-
         this.addKeyListener(new MyKeyListener());
-
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
