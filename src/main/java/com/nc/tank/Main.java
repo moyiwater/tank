@@ -7,7 +7,6 @@ public class Main {
         while (true) {
             Thread.sleep(50);
             tf.repaint();
-            System.out.println("123");
         }
     }
 
