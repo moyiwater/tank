@@ -79,6 +79,7 @@ public class TankFrame extends Frame{
                 default:
                     break;
             }
+            setMainTankDir();
         }
 
         private void setMainTankDir () {
