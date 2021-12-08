@@ -2,12 +2,16 @@ package com.nc.tank;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TankFrame extends Frame{
 
     Tank myTank = new Tank(200, 200, Dir.DOWN, this);
 
-    Bullet b = new Bullet(300, 300, Dir.DOWN);
+//    Bullet b = new Bullet(300, 300, Dir.DOWN);
+
+    List<Bullet> bullets = new ArrayList<>();
 
     static final int GAME_WIDTH = 800, GAME_HEIGHT = 600;
 
@@ -44,8 +48,15 @@ public class TankFrame extends Frame{
 
     @Override
     public void paint (Graphics g) {
+        Color c = g.getColor();
+        g.setColor(Color.WHITE);
+        g.drawString("子弹的数量：" + bullets.size(), 10, 60);
+        g.setColor(c);
+
         myTank.paint (g);
-        b.paint(g);
+        for (int i = 0; i < bullets.size(); i++) {
+            bullets.get(i).paint(g);
+        }
     }
 
     class MyKeyListener extends KeyAdapter {
