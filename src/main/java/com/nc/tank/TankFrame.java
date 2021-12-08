@@ -54,8 +54,8 @@ public class TankFrame extends Frame{
         g.setColor(c);
 
         myTank.paint (g);
-        for (Bullet b : bullets) {
-            b.paint(g);
+        for (int i = 0; i < bullets.size(); i++) {
+            bullets.get(i).paint(g);
         }
     }
 
