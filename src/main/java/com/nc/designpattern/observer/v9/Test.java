@@ -32,7 +32,7 @@ class Button {
 }
 
 interface ActionListener {
-    public void actionPerformed (ActionEvent e);
+    void actionPerformed (ActionEvent e);
 }
 
 class MyActionListener implements ActionListener {
