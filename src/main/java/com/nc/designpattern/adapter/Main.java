@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws Exception{
         FileInputStream fileInputStream = new FileInputStream("G:\\test\\test.txt");
+        //这句话体现了适配器模式，将stream转换为了reader，用于下边的bufferedReader
         InputStreamReader isr = new InputStreamReader(fileInputStream);
         BufferedReader bufferedReader = new BufferedReader(isr);
 //        String s = bufferedReader.readLine();
